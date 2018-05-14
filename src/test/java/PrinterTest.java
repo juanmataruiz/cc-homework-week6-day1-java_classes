@@ -13,6 +13,13 @@ public class PrinterTest {
     }
 
     @Test
+    public void canPrint(){
+        printer.getPrint();
+        assertEquals(90, printer.getSheets());
+        assertEquals(80, printer.getToner());
+    }
+
+    @Test
     public void hasSheets(){
         assertEquals(100, printer.getSheets());
     }
@@ -30,13 +37,6 @@ public class PrinterTest {
     @Test
     public void hasToner(){
         assertEquals(90, printer.getToner());
-    }
-
-    @Test
-    public void canPrint(){
-        printer.getPrint();
-        assertEquals(90, printer.getSheets());
-        assertEquals(80, printer.getToner());
     }
 
 }

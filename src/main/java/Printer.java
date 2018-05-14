@@ -10,6 +10,12 @@ public class Printer {
         this.copies = copies;
     }
 
+    public void getPrint() {
+        if (sheets >= copies){
+            sheets -= copies;
+            toner -= copies;
+        }
+    }
 
     public int getSheets() {
         return sheets;
@@ -25,13 +31,6 @@ public class Printer {
 
     public int getRefill() {
         return sheets = 100;
-    }
-
-    public void getPrint() {
-        if (sheets >= copies){
-            sheets -= copies;
-            toner -= copies;
-        }
     }
 
 }
